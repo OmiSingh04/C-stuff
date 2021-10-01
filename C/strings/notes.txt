@@ -1,0 +1,24 @@
+Array of characters
+{'j','a','v','a', '\0'} == "java"
+compiler appends \0 at the end.
+
+C strings are terminated by the null character.
+
+whenever there is a \0, it marks the end of the string
+
+to traverse through the char array, we use the \0 to identify the end of the
+string
+
+
+gets() and puts()
+
+declares in the header file stdio.h
+
+they are used for input and output operations on strings
+
+gets() -> used to read characters until new line
+idk if it is deprecated
+people said avoid using this as much as possible :)
+
+
+

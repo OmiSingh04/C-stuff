@@ -1,0 +1,28 @@
+How to read the pointer: int (*p)[10].
+
+To read the pointer, we must see that () and [] have the equal precedence. Therefore, their associativity must be considered here. The associativity is left to right, so the priority goes to ().
+
+Inside the bracket (), pointer operator * and pointer name (identifier) p have the same precedence. Therefore, their associativity must be considered here which is right to left, so the priority goes to p, and the second priority goes to *.
+
+Assign the 3rd priority to [] since the data type has the last precedence. Therefore the pointer will look like following.
+
+
+READ THIS
+
+
+int (*p)[10];
+p is a pointer pointing to an integer array of length 10
+
+int *p[10];
+p is an array is 10 integer pointers.
+
+
+int (*p)(int (*)[2], int (*)void)) 
+p is a pointer pointing to a function which takes
+-> a pointer to an array of 2 integers
+-> a pointer to a function which returns void type
+
+
+
+void ( *(*f[]) () ) ();
+f is an array of pointers to a function w

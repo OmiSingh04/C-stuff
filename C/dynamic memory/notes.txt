@@ -1,0 +1,46 @@
+The purpose of this concept is to be able to allocate memory at RUNTIME
+
+malloc()
+calloc()
+realloc()
+free()
+
+these are use to allocate and de-accocate memory in the heap(which is where
+the dynamic memory is stored, and proceed opposite to a stack)
+
+
+in constrast, the static memory allocation is like, static, doesnt change at
+runtime :)
+
+arrays are static, static memory allocation is used in making arrays
+
+lists are dynamic by their property, hence dynamic memory allocation is used
+in making lists
+like linked list
+
+FUNCTION DESCRIPTION:
+malloc(): allocates single block of memory
+calloc(): allocates multiple block of memory
+realloc(): reallocates the memory occupies by malloc() or calloc()
+
+free(): free the dynamically allocated memory
+
+these are use to allocate and de-accocate memory in the heap(which is where
+the dynamic memory is stored, and proceed opposite to a stack)
+
+
+in constrast, the static memory allocation is like, static, doesnt change at
+runtime :)
+
+arrays are static, static memory allocation is used in making arrays
+
+lists are dynamic by their property, hence dynamic memory allocation is used
+in making lists
+like linked list
+
+FUNCTION DESCRIPTION:
+malloc(): allocates single block of memory
+calloc(): allocates multiple block of memory
+reallloc(): reallocates the memory occupies by malloc() or calloc()
+free(): free the dynamically allocated memory
+

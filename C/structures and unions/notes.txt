@@ -1,0 +1,30 @@
+Structures are like classes
+These are entities which store multiple data
+
+like
+Struct would be a Student
+and data in it would be 
+Name
+roll no
+adm no
+etc
+
+
+quite simple
+very similar to classes
+very useful in implementing a data structure
+
+so like,
+struct Student{
+	
+	char name[20];
+	int roll;
+	int adm_no;
+};
+
+Structure padding:
+
+ok this is something interesting. has a lot to do with the architecture of the
+pc/compiler
+
+
