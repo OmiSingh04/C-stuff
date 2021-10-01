@@ -1,28 +1,31 @@
-How to read the pointer: int (*p)[10].
-
-To read the pointer, we must see that () and [] have the equal precedence. Therefore, their associativity must be considered here. The associativity is left to right, so the priority goes to ().
-
-Inside the bracket (), pointer operator * and pointer name (identifier) p have the same precedence. Therefore, their associativity must be considered here which is right to left, so the priority goes to p, and the second priority goes to *.
-
-Assign the 3rd priority to [] since the data type has the last precedence. Therefore the pointer will look like following.
+pointers store the address of a variable.
+they occupy twice the number of bytes occupied by the variable. probably because using indirection (*) on pointers gives the value at the address and it is stored in half of those bytes.
+i think.
 
 
-READ THIS
+since pointers are also variables, you can have pointers pointing to pointers too.
+this doesnt mean the second pointer will take twice the bytes of the first pointer.
+int a is 4 bytes
+int *p = &a
+p is 8 bytes
+
+p is like any other variable.
+it has an integer value
+it has an address
+it has twice the size, and i really think its cause of when you use indirection.
+
+int **q = &p
+
+q is also like any other variable
+it has an address, and a value
+q occupies 8 bytes as its a pointer pointer to some value
+
+this is a low level concept. 
+java, python, javascript, etc and other high level languages dont have the concept of pointers.
+
+even when you allocate dynamic memory, the functions to do those return pointers to those free blocks.
+
+im going over the basics again and again
+i eventually have to try some project or this is all for nothing.
 
 
-int (*p)[10];
-p is a pointer pointing to an integer array of length 10
-
-int *p[10];
-p is an array is 10 integer pointers.
-
-
-int (*p)(int (*)[2], int (*)void)) 
-p is a pointer pointing to a function which takes
--> a pointer to an array of 2 integers
--> a pointer to a function which returns void type
-
-
-
-void ( *(*f[]) () ) ();
-f is an array of pointers to a function w
