@@ -6,7 +6,6 @@
 #include<sys/socket.h>
 #include<netinet/in.h>
 
-#define MAX 1024
 
 //this is a simple server which sends a message when a request is sent.
 
@@ -35,6 +34,8 @@ int main(int argc, char* argv[]){
 	/*creating the address, the challenging part.*/
 
 	struct sockaddr_in address;
+
+	memset(&address, 0, sizeof(address));
 	/*
 	bind function takes the socket, sockaddr struct, which we give through explicit type conversion, and sizeof the address
 	*/
