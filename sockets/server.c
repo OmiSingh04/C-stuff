@@ -67,6 +67,6 @@ int main(int argc, char* argv[]){
 	}
 
 	send(sock_fd, message, strlen(message), 0);
-	printf("message sent");
+	printf("message sent\n");
 	
 }

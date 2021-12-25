@@ -1,4 +1,4 @@
-#define PORT 9992
+#define SERVER_PORT 9991
 #define MAX 1024
 
 #include<string.h>
@@ -25,12 +25,8 @@ int main(int argc, char* argv[]){
 	memset(&server_addr, 0, sizeof(server_addr));
 
 	server_addr.sin_family = AF_INET;
-	server_addr.sin_port = htons(PORT);
-	
-	if(inet_pton(AF_INET, "127.0.0.0", &server_addr.sin_addr) <= 0){
-		perror("invalid address");
-		exit(EXIT_FAILURE);
-	}
+	server_addr.sin_port = htons(SERVER_PORT);
+	server_addr.sin_addr.s_addr = INADDR_ANY;
 
 	if(connect(sock_fd, (struct sockaddr*) &server_addr, sizeof(server_addr)) < 0){
 		perror("couldnt connect to server");
@@ -38,7 +34,7 @@ int main(int argc, char* argv[]){
 	}
 	
 	read(sock_fd, message, MAX);
-	printf("message from server - %s", message);
+	printf("message from server - %s\n", message);
 
 	return 0;
 
